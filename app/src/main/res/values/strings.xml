@@ -1,3 +1,13 @@
 <resources>
-    <string name="app_name">ClimaApp</string>
+    <string name="app_name" translatable="false">ClimaApp</string>
+    <string name="accept">Accept</string>
+    <string name="message_permission">The app needs location permissions for its use.</string>
+    <string name="permission_denied">Permission denied. \nEnable permissions in app settings.</string>
+    <string name="temp" translatable="false">%1$02d°C</string>
+    <string name="feels_like">Feels like: %1$02d°C</string>
+    <string name="min" translatable="false">Min</string>
+    <string name="max" translatable="false">Max</string>
+    <string name="api_key" translatable="false">AIzaSyChwuf9uc_jf9E7C65C2wKXUcZYTg3UIEk</string>
+    <string name="update_location">Update location</string>
+    <string name="current_location">Current location</string>
 </resources>

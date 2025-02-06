@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="accept">Aceptar</string>
+    <string name="message_permission">El app necesita los permisos de ubicación para su uso.</string>
+    <string name="permission_denied">Permiso denegado. \nActivar permisos en la configuración de app.</string>
+    <string name="feels_like">Sensación: %1$02d°C</string>
+    <string name="update_location">Actualizar ubicación</string>
+    <string name="current_location">Ubicación actual</string>
+</resources>

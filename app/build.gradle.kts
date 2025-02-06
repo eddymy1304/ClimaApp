@@ -1,7 +1,15 @@
+import org.jetbrains.kotlin.konan.properties.Properties
+
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
     alias(libs.plugins.kotlin.compose)
+
+    alias(libs.plugins.kotlin.serialization)
+
+    alias(libs.plugins.devtools.ksp)
+
+    alias(libs.plugins.hilt)
 }
 
 android {
@@ -16,9 +24,34 @@ android {
         versionName = "1.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+
+        val keystoreFile = project.rootProject.file("local.properties")
+        val properties = Properties()
+        properties.load(keystoreFile.inputStream())
+
+        val apiKey = properties.getProperty("API_KEY") ?: ""
+        val baseUrl = properties.getProperty("BASE_URL") ?: ""
+
+        buildConfigField(
+            "String",
+            "BASE_URL",
+            baseUrl
+        )
+
+        buildConfigField(
+            "String",
+            "API_KEY",
+            apiKey
+        )
     }
 
     buildTypes {
+
+        debug {
+            isMinifyEnabled = false
+            isDebuggable = true
+        }
+
         release {
             isMinifyEnabled = false
             proguardFiles(
@@ -36,6 +69,7 @@ android {
     }
     buildFeatures {
         compose = true
+        buildConfig = true
     }
 }
 
@@ -49,6 +83,31 @@ dependencies {
     implementation(libs.androidx.ui.graphics)
     implementation(libs.androidx.ui.tooling.preview)
     implementation(libs.androidx.material3)
+    implementation(libs.androidx.material.icons.extended)
+
+    implementation(libs.androidx.constraintlayout.compose)
+
+    implementation(libs.kotlinx.serialization.json)
+
+    implementation(libs.androidx.navigation.compose)
+
+    implementation(libs.hilt.android)
+    implementation(libs.hilt.navigation.compose)
+    ksp(libs.hilt.android.compiler)
+
+    implementation(libs.play.services.location)
+    implementation(libs.accompanist.permissions)
+
+    implementation(libs.retrofit)
+    implementation(libs.retrofit.kotlinx.serialization.converter)
+    implementation(libs.okhttp)
+
+    implementation(libs.coil.compose)
+    implementation(libs.coil.network.okhttp)
+    implementation (libs.glide.compose)
+
+    implementation (libs.maps.compose)
+
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)

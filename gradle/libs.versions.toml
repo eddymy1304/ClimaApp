@@ -1,16 +1,36 @@
 [versions]
 agp = "8.8.0"
-kotlin = "2.0.0"
+coilComposeVersion = "3.1.0"
+glideComposeVersion = "1.0.0-beta01"
+constraintlayoutComposeVersion = "1.1.0"
+kotlin = "2.1.10"
 coreKtx = "1.15.0"
 junit = "4.13.2"
 junitVersion = "1.2.1"
 espressoCore = "3.6.1"
 lifecycleRuntimeKtx = "2.8.7"
 activityCompose = "1.10.0"
-composeBom = "2024.04.01"
+composeBom = "2025.01.01"
+
+mapsComposeVersion = "4.4.1"
+navigationCompose = "2.8.6"
+serialization-json-version = "1.8.0"
+devtools-ksp-version = "2.1.0-1.0.29"
+hilt-version = "2.55"
+hilt-navigation-compose-version = "1.2.0"
+location-version = "21.3.0"
+accompanist-permissions-version = "0.37.0"
+retrofit-version = "2.11.0"
+okhttp-version = "4.12.0"
+retrofit-kotlinx-serialization-converter-version = "1.0.0"
 
 [libraries]
+androidx-constraintlayout-compose = { module = "androidx.constraintlayout:constraintlayout-compose", version.ref = "constraintlayoutComposeVersion" }
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
+androidx-navigation-compose = { module = "androidx.navigation:navigation-compose", version.ref = "navigationCompose" }
+coil-compose = { module = "io.coil-kt.coil3:coil-compose", version.ref = "coilComposeVersion" }
+coil-network-okhttp = { module = "io.coil-kt.coil3:coil-network-okhttp", version.ref = "coilComposeVersion" }
+glide-compose = { module = "com.github.bumptech.glide:compose", version.ref = "glideComposeVersion" }
 junit = { group = "junit", name = "junit", version.ref = "junit" }
 androidx-junit = { group = "androidx.test.ext", name = "junit", version.ref = "junitVersion" }
 androidx-espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espressoCore" }
@@ -25,8 +45,37 @@ androidx-ui-test-manifest = { group = "androidx.compose.ui", name = "ui-test-man
 androidx-ui-test-junit4 = { group = "androidx.compose.ui", name = "ui-test-junit4" }
 androidx-material3 = { group = "androidx.compose.material3", name = "material3" }
 
+androidx-material-icons-extended = { module = "androidx.compose.material:material-icons-extended" }
+
+# Serialization Json
+kotlinx-serialization-json = { module = "org.jetbrains.kotlinx:kotlinx-serialization-json", version = "serialization-json-version" }
+
+# Hilt
+hilt-android = { module = "com.google.dagger:hilt-android", version.ref = "hilt-version" }
+hilt-android-compiler = { module = "com.google.dagger:hilt-compiler", version.ref = "hilt-version" }
+hilt-android-gradle-plugin = { module = "com.google.dagger:hilt-android-gradle-plugin", version.ref = "hilt-version" }
+hilt-navigation-compose = { module = "androidx.hilt:hilt-navigation-compose", version.ref = "hilt-navigation-compose-version" }
+
+# Location
+maps-compose = { module = "com.google.maps.android:maps-compose", version.ref = "mapsComposeVersion" }
+play-services-location = { module = "com.google.android.gms:play-services-location", version.ref = "location-version" }
+
+# Permissions
+accompanist-permissions = { module = "com.google.accompanist:accompanist-permissions", version.ref = "accompanist-permissions-version" }
+
+# Retrofit
+retrofit = { module = "com.squareup.retrofit2:retrofit", version.ref = "retrofit-version" }
+retrofit-kotlinx-serialization-converter = { module = "com.jakewharton.retrofit:retrofit2-kotlinx-serialization-converter", version.ref = "retrofit-kotlinx-serialization-converter-version" }
+#converter-gson = { module = "com.squareup.retrofit2:converter-gson", version.ref = "retrofit-version" }
+okhttp = { module = "com.squareup.okhttp3:okhttp", version.ref = "okhttp-version" }
+
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
 kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
 kotlin-compose = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
 
+kotlin-serialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlin" }
+
+devtools-ksp = { id = "com.google.devtools.ksp", version.ref = "devtools-ksp-version" }
+
+hilt = { id = "com.google.dagger.hilt.android", version.ref = "hilt-version" }
