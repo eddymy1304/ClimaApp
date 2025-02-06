@@ -26,3 +26,26 @@ Se muestra el clima actual por ubicacion y el pronostico en los proximos dias
 ### SearchMap:
 Busqueda manual de ubicacion para mostrar clima actual y pronostico
 
+Screens
+
+* Clima Screen
+
+  ![Screenshot_20250206_161154](https://github.com/user-attachments/assets/8af85049-3869-4793-9ca1-d343e48c97c8)
+
+
+* SearchMap Screen
+
+  ![Screenshot_20250206_161219](https://github.com/user-attachments/assets/acc96680-48c4-449a-bffd-8e37355a58c9)
+
+
+
+* Clima App
+  
+![Screenshot_20250206_160954](https://github.com/user-attachments/assets/cb2cec5b-90f9-42d8-b78e-100299fa701e)
+
+* Solicitud de permisos
+
+![Screenshot_20250206_161036](https://github.com/user-attachments/assets/e53cc237-4fdb-49aa-980e-139685f6ea29)
+
+
+
