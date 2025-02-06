@@ -7,7 +7,6 @@
     <string name="feels_like">Feels like: %1$02d°C</string>
     <string name="min" translatable="false">Min</string>
     <string name="max" translatable="false">Max</string>
-    <string name="api_key" translatable="false">AIzaSyChwuf9uc_jf9E7C65C2wKXUcZYTg3UIEk</string>
     <string name="update_location">Update location</string>
     <string name="current_location">Current location</string>
 </resources>

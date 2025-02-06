@@ -31,6 +31,13 @@ android {
 
         val apiKey = properties.getProperty("API_KEY") ?: ""
         val baseUrl = properties.getProperty("BASE_URL") ?: ""
+        val mapsApiKey = properties.getProperty("MAPS_API_KEY") ?: ""
+
+        resValue(
+            "string",
+            "MAPS_API_KEY",
+            mapsApiKey
+        )
 
         buildConfigField(
             "String",
@@ -104,9 +111,9 @@ dependencies {
 
     implementation(libs.coil.compose)
     implementation(libs.coil.network.okhttp)
-    implementation (libs.glide.compose)
+    implementation(libs.glide.compose)
 
-    implementation (libs.maps.compose)
+    implementation(libs.maps.compose)
 
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
